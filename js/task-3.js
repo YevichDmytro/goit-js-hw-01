@@ -1,8 +1,9 @@
-function checkForSpam(message) {
-  const lowerCaseMessage = message.toLowerCase();
-  return lowerCaseMessage.includes('spam') || lowerCaseMessage.includes('sale')
-    ? true
-    : false;
+function getElementWidth(content, padding, border) {
+  return (
+    Number.parseFloat(content) +
+    Number.parseFloat(padding) * 2 +
+    Number.parseFloat(border) * 2
+  );
 }
 
 console.log(getElementWidth('50px', '8px', '4px')); // 74
